@@ -1,4 +1,4 @@
-package adt.list.linkedlist;
+package DataStructures.ADT.List.LinkedList;
 
 import java.util.ConcurrentModificationException;
 import java.util.Iterator;
