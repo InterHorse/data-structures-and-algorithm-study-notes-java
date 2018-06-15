@@ -17,5 +17,7 @@ public class PostorderTraversalTest {
         BinaryNode binaryTree = BinaryTreeFactory.createBinaryTree();
         PostorderTraversal postorderTraversal = new PostorderTraversal();
         postorderTraversal.printTreeByPostorderTraversal(binaryTree);
+        System.out.println();
+        postorderTraversal.printTreeByPostorderTraversalWith2Stacks(binaryTree);
     }
 }

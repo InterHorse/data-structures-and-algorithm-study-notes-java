@@ -17,5 +17,7 @@ public class InorderTraversalTest {
         BinaryNode binaryTree = BinaryTreeFactory.createBinaryTree();
         InorderTraversal inorderTraversal = new InorderTraversal();
         inorderTraversal.printTreeByInorderTraversal(binaryTree);
+        System.out.println();
+        inorderTraversal.printTreeByInorderTraversalStack(binaryTree);
     }
 }

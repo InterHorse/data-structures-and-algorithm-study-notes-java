@@ -2,6 +2,8 @@ package DataStructures.ADT.Tree.BinaryTree.PreorderTraversal;
 
 import DataStructures.ADT.Tree.BinaryTree.BinaryNode;
 
+import java.util.Stack;
+
 /**
  * Created with IDEA
  * Author: MaYuzhe
@@ -21,6 +23,24 @@ public class PreorderTraversal {
         }
         if(rootNode.getRight() != null) {
             printTreeByPreorderTraversal(rootNode.getRight());
+        }
+    }
+
+    /**
+     * 先序遍历打印二叉树（堆栈）
+     * @param rootNode
+     */
+    public void printTreeByPreorderTraversalStack(BinaryNode rootNode) {
+        Stack<BinaryNode> stack = new Stack<>();
+        while(rootNode != null || stack.size() > 0) {
+            if(rootNode != null) {
+                stack.push(rootNode);
+                System.out.print(rootNode.getElement().toString() + " ");
+                rootNode = rootNode.getLeft();
+            } else {
+                rootNode = stack.pop();
+                rootNode = rootNode.getRight();
+            }
         }
     }
 }

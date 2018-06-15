@@ -16,5 +16,7 @@ public class PreorderTraversalTest {
         BinaryNode binaryTree = BinaryTreeFactory.createBinaryTree();
         PreorderTraversal preorderTraversal = new PreorderTraversal();
         preorderTraversal.printTreeByPreorderTraversal(binaryTree);
+        System.out.println();
+        preorderTraversal.printTreeByPreorderTraversalStack(binaryTree);
     }
 }
