@@ -5,8 +5,8 @@ package DataStructures.ADT.Tree.BinaryTree;
  * Author: MaYuzhe
  * Date: 2018/6/15
  * Time: 14:20
- *
- *
+ * <p>
+ * <p>
  * 二叉树节点类
  */
 public class BinaryNode {

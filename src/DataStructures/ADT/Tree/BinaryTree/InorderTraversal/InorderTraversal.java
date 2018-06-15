@@ -19,10 +19,13 @@ public class InorderTraversal {
      */
     public void printTreeByInorderTraversal(BinaryNode rootNode) {
         if (rootNode.getLeft() != null) {
+            // 先访问左节点
             printTreeByInorderTraversal(rootNode.getLeft());
         }
+        // 输入根节点
         System.out.print(rootNode.getElement().toString() + " ");
         if (rootNode.getRight() != null) {
+            // 再访问右节点
             printTreeByInorderTraversal(rootNode.getRight());
         }
     }

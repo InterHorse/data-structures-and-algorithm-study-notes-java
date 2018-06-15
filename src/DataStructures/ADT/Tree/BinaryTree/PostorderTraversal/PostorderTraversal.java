@@ -19,11 +19,14 @@ public class PostorderTraversal {
      */
     public void printTreeByPostorderTraversal(BinaryNode rootNode) {
         if (rootNode.getLeft() != null) {
+            // 先访问左节点
             printTreeByPostorderTraversal(rootNode.getLeft());
         }
         if (rootNode.getRight() != null) {
+            // 再访问右节点
             printTreeByPostorderTraversal(rootNode.getRight());
         }
+        // 输出根节点
         System.out.print(rootNode.getElement().toString() + " ");
     }
 
