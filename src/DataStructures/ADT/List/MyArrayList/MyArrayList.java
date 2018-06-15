@@ -1,4 +1,4 @@
-package DataStructures.ADT.List.ArrayList;
+package DataStructures.ADT.List.MyArrayList;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
