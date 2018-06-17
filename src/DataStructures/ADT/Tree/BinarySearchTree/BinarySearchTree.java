@@ -203,6 +203,7 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
 
     /**
      * 删除节点
+     *
      * @param t
      * @param node
      * @return
@@ -229,12 +230,13 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
 
     /**
      * 删除右侧做小节点
+     *
      * @param node
      * @param rNode
      * @return
      */
     private BinaryNode<T> removeRightMin(BinaryNode<T> node, BinaryNode<T> rNode) {
-        if(rNode.left != null) {
+        if (rNode.left != null) {
             rNode.left = removeRightMin(node, rNode.left);
         } else {
             node.element = rNode.element;
