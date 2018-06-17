@@ -82,6 +82,7 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
         } else {
             printTree(root);
         }
+        System.out.println();
     }
 
 
@@ -107,7 +108,7 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
      * @return 如果有相等的值则返回true。否则返回false
      */
     private boolean contains(T t, BinaryNode<T> node) {
-        if (t == null) {
+        if (node == null) {
             return false;
         }
         int compareResult = t.compareTo(node.element);
@@ -148,7 +149,7 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
         } else if (node.right == null) {
             return node;
         }
-        return findMin(node.right);
+        return findMax(node.right);
     }
 
 //    /**
