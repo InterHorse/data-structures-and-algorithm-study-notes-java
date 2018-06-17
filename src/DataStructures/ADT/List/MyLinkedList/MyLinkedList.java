@@ -199,15 +199,15 @@ public class MyLinkedList<T> implements Iterable<T> {
      *
      * @param <T>
      */
-    private class Node<T> {
+    private static class Node<T> {
         // 元素内容
-        public T data;
+        T data;
         // 上一个元素
-        public Node<T> prev;
+        Node<T> prev;
         // 下一个元素
-        public Node<T> next;
+        Node<T> next;
 
-        public Node(T d, Node<T> p, Node<T> n) {
+        Node(T d, Node<T> p, Node<T> n) {
             data = d;
             prev = p;
             next = n;
