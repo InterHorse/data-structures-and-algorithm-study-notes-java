@@ -55,14 +55,14 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
     }
 
     public T findMin() {
-        if(isEmpty()) {
+        if (isEmpty()) {
             return null;
         }
         return findMin(root).element;
     }
 
     public T findMax() {
-        if(isEmpty()) {
+        if (isEmpty()) {
             return null;
         }
         return findMax(root).element;
@@ -77,7 +77,7 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
     }
 
     public void printTree() {
-        if(isEmpty()) {
+        if (isEmpty()) {
             System.out.println("空树/Empty tree");
         } else {
             printTree(root);
@@ -87,10 +87,11 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
 
     /**
      * 中序遍历方式打印树
+     *
      * @param node
      */
     private void printTree(BinaryNode<T> node) {
-        if(node != null) {
+        if (node != null) {
             printTree(node.left);
             System.out.println(node.element);
             printTree(node.right);
@@ -199,6 +200,12 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
         return node;
     }
 
+    /**
+     * 删除节点
+     * @param t
+     * @param node
+     * @return
+     */
     private BinaryNode<T> remove(T t, BinaryNode<T> node) {
         if (t == null) {
             return null;
@@ -210,24 +217,28 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
         } else if (compareResult > 0) {
             node.right = remove(t, node.right);
         } else if (node.left != null && node.right != null) {
-            node.element = findMin(node.right).element;
-            node.right = remove(node.element, node.right);
-//            removeRightMin(node);
+//            node.element = findMin(node.right).element;
+//            node.right = remove(node.element, node.right);
+            node.right = removeRightMin(node, node.right);
         } else {
             node = node.left != null ? node.left : node.right;
         }
         return node;
     }
 
-    private void removeRightMin(BinaryNode<T> node) {
-        BinaryNode<T> currentNode = node.right;
-        BinaryNode<T> rNode = currentNode;
-        while (currentNode.left != null) {
-            currentNode = currentNode.left;
+    /**
+     * 删除右侧做小节点
+     * @param node
+     * @param rNode
+     * @return
+     */
+    private BinaryNode<T> removeRightMin(BinaryNode<T> node, BinaryNode<T> rNode) {
+        if(rNode.left != null) {
+            rNode.left = removeRightMin(node, rNode.left);
+        } else {
+            node.element = rNode.element;
+            rNode = rNode.right;
         }
-        node.element = currentNode.element;
-        currentNode = currentNode.right;
-        node.right = rNode;
-
+        return rNode;
     }
 }
