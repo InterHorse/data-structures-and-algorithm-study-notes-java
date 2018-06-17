@@ -5,6 +5,8 @@ package DataStructures.ADT.Tree.BinarySearchTree;
  * Author: MaYuzhe
  * Date: 2018/6/17
  * Time: 15:42
+ *
+ * BinarySearchTreeTest 二叉查找树测试类
  */
 public class BinarySearchTreeTest {
     public static void main(String[] args) {
