@@ -221,6 +221,7 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
         } else if (node.left != null && node.right != null) {
 //            node.element = findMin(node.right).element;
 //            node.right = remove(node.element, node.right);
+            // 用removeRightMin方法替代上面两个操作，将两次遍历合并成一次遍历完成，提高效率
             node.right = removeRightMin(node, node.right);
         } else {
             node = node.left != null ? node.left : node.right;
