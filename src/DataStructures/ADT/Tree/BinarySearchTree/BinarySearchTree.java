@@ -50,10 +50,21 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
         return this.root == null;
     }
 
+    /**
+     * 判断元素是否在树中
+     *
+     * @param t 元素
+     * @return 存在则返回true，不存在返回false
+     */
     public boolean contais(T t) {
         return contains(t, root);
     }
 
+    /**
+     * 查找最小元素
+     *
+     * @return 最小元素
+     */
     public T findMin() {
         if (isEmpty()) {
             return null;
@@ -61,6 +72,11 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
         return findMin(root).element;
     }
 
+    /**
+     * 查找最大元素
+     *
+     * @return 最大元素
+     */
     public T findMax() {
         if (isEmpty()) {
             return null;
@@ -68,14 +84,27 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
         return findMax(root).element;
     }
 
+    /**
+     * 插入元素t
+     *
+     * @param t 要插入的元素
+     */
     public void insert(T t) {
         root = insert(t, root);
     }
 
+    /**
+     * 删除元素t
+     *
+     * @param t 被删除的元素
+     */
     public void remove(T t) {
         root = remove(t, root);
     }
 
+    /**
+     * 按照中序遍历法打印树
+     */
     public void printTree() {
         if (isEmpty()) {
             System.out.println("空树/Empty tree");
