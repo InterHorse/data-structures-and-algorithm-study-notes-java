@@ -5,6 +5,8 @@ package DataStructures.ADT.Tree.AvlTree;
  * Author: MaYuzhe
  * Date: 2018/6/19
  * Time: 18:44
+ *
+ * AVL测试类
  */
 public class AvlTreeTest {
     public static void main(String[] args) {
