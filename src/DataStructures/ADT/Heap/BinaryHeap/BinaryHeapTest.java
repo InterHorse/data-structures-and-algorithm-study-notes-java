@@ -11,7 +11,7 @@ package DataStructures.ADT.Heap.BinaryHeap;
 public class BinaryHeapTest {
     public static void main(String[] args) {
         BinaryHeap binaryHeap = new BinaryHeap();
-        int[] nums = new int[]{23, 98, 34, 63, 3, 0, 87, 45};
+        int[] nums = new int[]{78, 23, 43, 22, 0, 98, 38};
         for (Integer num : nums) {
             binaryHeap.insert(num);
         }
