@@ -1,5 +1,7 @@
 package Alogrithm.Sort.InsertionSort;
 
+import Alogrithm.Sort.BaseSort;
+
 /**
  * Created with IDEA
  * Author: MaYuzhe
@@ -8,7 +10,7 @@ package Alogrithm.Sort.InsertionSort;
  * <p>
  * 插入排序类
  */
-public class InsertionSort {
+public class InsertionSort extends BaseSort {
 
     /**
      * InsertionSort 插入排序
@@ -28,5 +30,10 @@ public class InsertionSort {
             // 将tmp替换p位置的值（上面的for已经将原来的p后移了）
             arr[p] = tmp;
         }
+    }
+
+    @Override
+    public <T extends Comparable<? super T>> void sort(T[] array) {
+        insertionSort(array);
     }
 }

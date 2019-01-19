@@ -1,5 +1,7 @@
 package Alogrithm.Sort.HeapSort;
 
+import Alogrithm.Sort.BaseSort;
+
 /**
  * Created with IDEA
  * Author: MaYuzhe
@@ -8,7 +10,7 @@ package Alogrithm.Sort.HeapSort;
  * <p>
  * 堆排序
  */
-public class HeapSort {
+public class HeapSort extends BaseSort {
     public static <T extends Comparable<? super T>> void heapSort(T[] array) {
         // 创建堆
         for (int i = array.length / 2 - 1; i >= 0; i--) {
@@ -72,5 +74,10 @@ public class HeapSort {
         T tmp = array[index1];
         array[index1] = array[index2];
         array[index2] = tmp;
+    }
+
+    @Override
+    public <T extends Comparable<? super T>> void sort(T[] array) {
+        heapSort(array);
     }
 }

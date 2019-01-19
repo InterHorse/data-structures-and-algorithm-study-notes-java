@@ -1,5 +1,7 @@
 package Alogrithm.Sort.ShellSort;
 
+import Alogrithm.Sort.BaseSort;
+
 /**
  * Created with IDEA
  * Author: MaYuzhe
@@ -8,7 +10,7 @@ package Alogrithm.Sort.ShellSort;
  * <p>
  * 希尔排序
  */
-public class ShellSort {
+public class ShellSort extends BaseSort {
 
     /**
      * shellsort 希尔排序
@@ -30,5 +32,10 @@ public class ShellSort {
                 arr[p] = tmp;
             }
         }
+    }
+
+    @Override
+    public <T extends Comparable<? super T>> void sort(T[] array) {
+        shellSort(array);
     }
 }

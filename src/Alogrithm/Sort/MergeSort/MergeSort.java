@@ -1,5 +1,7 @@
 package Alogrithm.Sort.MergeSort;
 
+import Alogrithm.Sort.BaseSort;
+
 /**
  * Created with IDEA
  * Author: MaYuzhe
@@ -8,7 +10,7 @@ package Alogrithm.Sort.MergeSort;
  * <p>
  * 归并排序
  */
-public class MergeSort {
+public class MergeSort extends BaseSort {
 
     /**
      * 归并排序，对外暴露的方法
@@ -82,5 +84,10 @@ public class MergeSort {
         for (int i = 0; i < numElements; i++, rightEnd--) {
             a[rightEnd] = tmpArr[rightEnd];
         }
+    }
+
+    @Override
+    public <T extends Comparable<? super T>> void sort(T[] array) {
+        mergeSort(array);
     }
 }
