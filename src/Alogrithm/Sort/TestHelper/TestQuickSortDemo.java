@@ -1,7 +1,6 @@
-package Alogrithm.Sort.TestTool;
+package Alogrithm.Sort.TestHelper;
 
 import Alogrithm.Sort.MergeSort.MergeSort;
-import Alogrithm.Sort.QuickSort.QuickSort;
 import Alogrithm.Sort.QuickSort.QuickSortRandom;
 
 /**
